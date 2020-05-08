@@ -52,7 +52,7 @@ class SetupView: UIViewController {
         
         // go to GameView to play the game
         if segue.identifier == "startSegue" {
-            if let target = segue.destination as? GameView
+            if let target = segue.destination as? GameInfoView
             {
                 target.selectedName = selectedName;
                 target.highScoresArray = highScoresArray;

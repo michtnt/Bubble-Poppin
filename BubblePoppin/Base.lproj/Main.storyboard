@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd4-Dj-GqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7512.8000000000002" y="78.710644677661179"/>
+            <point key="canvasLocation" x="8510" y="79"/>
         </scene>
         <!--HighScore View-->
         <scene sceneID="xaF-l9-EvX">
@@ -323,7 +323,7 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButton:" destination="XzY-wl-Gbo" eventType="touchUpInside" id="jkb-Ca-KFx"/>
-                                    <segue destination="e7B-MY-1oY" kind="show" identifier="startSegue" id="Bc4-sB-Pt4"/>
+                                    <segue destination="GmW-1a-Abq" kind="show" identifier="startSegue" id="14Q-Ro-QDn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-NU-jYr" userLabel="Duration Label">
@@ -386,6 +386,64 @@
             </objects>
             <point key="canvasLocation" x="6636" y="78.710644677661179"/>
         </scene>
+        <!--Game Info View-->
+        <scene sceneID="8Sm-0x-Ye5">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="GmW-1a-Abq" customClass="GameInfoView" customModule="BubblePoppin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpc-Hi-wZe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-6Z-k9U">
+                                <rect key="frame" x="101" y="78" width="173" height="238"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="199"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kj-VR-w99">
+                                <rect key="frame" x="137" y="383" width="101" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqx-CS-Fqz">
+                                <rect key="frame" x="101" y="437" width="173" height="119.5"/>
+                                <string key="text">Red: 1 
+Pink: 2
+Green: 5 
+Blue: 8 
+Black: 10</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9kj-VR-w99" firstAttribute="top" secondItem="mb2-6Z-k9U" secondAttribute="bottom" constant="67" id="41i-j0-Srr"/>
+                            <constraint firstItem="jqx-CS-Fqz" firstAttribute="leading" secondItem="ziF-Fd-eY9" secondAttribute="leading" constant="101" id="N9y-dc-Nha"/>
+                            <constraint firstItem="mb2-6Z-k9U" firstAttribute="top" secondItem="ziF-Fd-eY9" secondAttribute="top" constant="78" id="QnW-qb-I9S"/>
+                            <constraint firstItem="9kj-VR-w99" firstAttribute="leading" secondItem="ziF-Fd-eY9" secondAttribute="leading" constant="137" id="RNF-wc-Z9D"/>
+                            <constraint firstItem="ziF-Fd-eY9" firstAttribute="trailing" secondItem="jqx-CS-Fqz" secondAttribute="trailing" constant="101" id="Wjw-gT-PfJ"/>
+                            <constraint firstItem="ziF-Fd-eY9" firstAttribute="trailing" secondItem="mb2-6Z-k9U" secondAttribute="trailing" constant="101" id="ZrZ-xc-GnC"/>
+                            <constraint firstItem="mb2-6Z-k9U" firstAttribute="leading" secondItem="ziF-Fd-eY9" secondAttribute="leading" constant="101" id="Zxf-Rv-VG2"/>
+                            <constraint firstItem="ziF-Fd-eY9" firstAttribute="bottom" secondItem="mb2-6Z-k9U" secondAttribute="bottom" constant="302" id="djy-BJ-4hk"/>
+                            <constraint firstItem="jqx-CS-Fqz" firstAttribute="top" secondItem="9kj-VR-w99" secondAttribute="bottom" constant="30" id="uO2-sa-JxK"/>
+                            <constraint firstItem="ziF-Fd-eY9" firstAttribute="trailing" secondItem="9kj-VR-w99" secondAttribute="trailing" constant="137" id="vLX-0j-ZG5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ziF-Fd-eY9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mcO-Ev-RXm"/>
+                    <connections>
+                        <outlet property="hint" destination="jqx-CS-Fqz" id="gUy-Iq-jth"/>
+                        <outlet property="ready" destination="mb2-6Z-k9U" id="JyU-HD-c6Q"/>
+                        <segue destination="e7B-MY-1oY" kind="show" identifier="gameSegue" id="DbD-C2-Mhj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOF-aY-dVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7608.8000000000002" y="78.710644677661179"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BlackBall" width="80" height="80"/>
@@ -395,7 +453,7 @@
         <image name="RedBall" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jtx-wU-B0N"/>
-        <segue reference="Kg4-Sc-hqu"/>
+        <segue reference="uJr-dU-mxA"/>
+        <segue reference="vb3-W7-xmN"/>
     </inferredMetricsTieBreakers>
 </document>
