@@ -167,7 +167,7 @@
                                     <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xyQ-pG-gbv" kind="show" identifier="highscoreSegue" id="uJr-dU-mxA"/>
+                                    <segue destination="xyQ-pG-gbv" kind="show" identifier="highScoreSegue" id="uJr-dU-mxA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-Rn-XW3">
@@ -186,7 +186,7 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lhZ-xb-jPD" firstAttribute="leading" secondItem="heA-Sc-8Ys" secondAttribute="leadingMargin" id="47p-0V-SRZ"/>
-                            <constraint firstItem="eb6-cY-agh" firstAttribute="top" secondItem="heA-Sc-8Ys" secondAttribute="topMargin" constant="44" id="5ma-C4-10e"/>
+                            <constraint firstItem="eb6-cY-agh" firstAttribute="top" secondItem="heA-Sc-8Ys" secondAttribute="top" constant="44" id="5ma-C4-10e"/>
                             <constraint firstItem="v9o-91-ID0" firstAttribute="leading" secondItem="Ubm-YR-bf4" secondAttribute="leading" constant="29.5" id="6Sq-0E-RKY"/>
                             <constraint firstItem="Ubm-YR-bf4" firstAttribute="trailing" secondItem="Xqb-Rn-XW3" secondAttribute="trailing" constant="60" id="7G6-EF-iRf"/>
                             <constraint firstAttribute="trailing" secondItem="Tg6-4r-X8D" secondAttribute="trailing" id="D4M-hn-0K6"/>
@@ -203,7 +203,7 @@
                             <constraint firstItem="Tg6-4r-X8D" firstAttribute="top" secondItem="v9o-91-ID0" secondAttribute="bottom" constant="7" id="h86-bs-J2L"/>
                             <constraint firstItem="Tg6-4r-X8D" firstAttribute="top" secondItem="Xqb-Rn-XW3" secondAttribute="bottom" constant="7" id="hyZ-rh-kHx"/>
                             <constraint firstItem="bUg-JW-Vv5" firstAttribute="leading" secondItem="eb6-cY-agh" secondAttribute="trailing" constant="60" id="lgn-SO-qKB"/>
-                            <constraint firstItem="lhZ-xb-jPD" firstAttribute="top" secondItem="heA-Sc-8Ys" secondAttribute="topMargin" constant="44" id="nFe-Lu-Fjj"/>
+                            <constraint firstItem="lhZ-xb-jPD" firstAttribute="top" secondItem="heA-Sc-8Ys" secondAttribute="top" constant="44" id="nFe-Lu-Fjj"/>
                             <constraint firstItem="Ubm-YR-bf4" firstAttribute="trailing" secondItem="bUg-JW-Vv5" secondAttribute="trailing" constant="10" id="sUQ-uo-44N"/>
                             <constraint firstItem="bUg-JW-Vv5" firstAttribute="top" secondItem="heA-Sc-8Ys" secondAttribute="top" constant="44" id="tF9-JS-luc"/>
                             <constraint firstItem="Tg6-4r-X8D" firstAttribute="leading" secondItem="heA-Sc-8Ys" secondAttribute="leading" id="yrf-Yu-VB5"/>
@@ -243,9 +243,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJs-KR-4dL">
-                                <rect key="frame" x="128" y="459" width="119" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJs-KR-4dL">
+                                <rect key="frame" x="128" y="606" width="119" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
@@ -256,7 +255,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BNv-P6-xD3" firstAttribute="trailing" secondItem="dJs-KR-4dL" secondAttribute="trailing" constant="128" id="Qlg-cF-fJB"/>
+                            <constraint firstItem="dJs-KR-4dL" firstAttribute="leading" secondItem="BNv-P6-xD3" secondAttribute="leading" constant="128" id="jtA-df-IBk"/>
                             <constraint firstItem="5uL-0f-AFY" firstAttribute="leading" secondItem="BNv-P6-xD3" secondAttribute="leading" constant="59" id="spZ-oG-TIQ"/>
+                            <constraint firstItem="dJs-KR-4dL" firstAttribute="top" secondItem="5uL-0f-AFY" secondAttribute="bottom" constant="550" id="uf4-eq-wh7"/>
                             <constraint firstItem="5uL-0f-AFY" firstAttribute="top" secondItem="BNv-P6-xD3" secondAttribute="top" constant="20" id="wAg-I7-4gJ"/>
                             <constraint firstItem="BNv-P6-xD3" firstAttribute="trailing" secondItem="5uL-0f-AFY" secondAttribute="trailing" constant="42" id="zYb-UL-vA6"/>
                         </constraints>
@@ -393,7 +395,7 @@
         <image name="RedBall" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uJr-dU-mxA"/>
-        <segue reference="dSv-Tn-qS8"/>
+        <segue reference="Jtx-wU-B0N"/>
+        <segue reference="Kg4-Sc-hqu"/>
     </inferredMetricsTieBreakers>
 </document>

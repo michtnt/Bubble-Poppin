@@ -269,7 +269,7 @@ class GameView: UIViewController {
                 target.highScoresArray = highscores
             }
         }
-        if (segue.identifier == "highscoreSegue") {
+        if (segue.identifier == "highScoreSegue") {
             if let target = segue.destination as? HighScoresView {
                 target.highScoresArray = highscores
             }
