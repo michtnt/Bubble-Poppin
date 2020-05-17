@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F727A77F2471662D00A0B7B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F76114A9245EA9FB00EC46DB /* BubblePoppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblePoppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76114AC245EA9FB00EC46DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F76114AE245EA9FB00EC46DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		F76114A0245EA9FA00EC46DB = {
 			isa = PBXGroup;
 			children = (
+				F727A77F2471662D00A0B7B6 /* README.md */,
 				F76114AB245EA9FB00EC46DB /* BubblePoppin */,
 				F76114C2245EAA0B00EC46DB /* BubblePoppinTests */,
 				F76114CD245EAA0B00EC46DB /* BubblePoppinUITests */,
