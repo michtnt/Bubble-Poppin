@@ -16,7 +16,7 @@ class GameView: UIViewController {
      var selectedDuration = Int()
      var highScoresArray = Array<HighScore>()
     
-    // bubble color; NOTE: SUBJECT TO CHANGE
+    // bubble color
     @IBOutlet weak var black: Bubble!
     @IBOutlet weak var blue: Bubble!
     @IBOutlet weak var green: Bubble!
@@ -55,13 +55,16 @@ class GameView: UIViewController {
         } else {
             points = sender.points
         }
+        // after pressing the bubble add the score to the total player's score
         score += points
         scoreCount.text = String(score)
         
         sender.removeFromSuperview()
         bubbleCount -= 1
+        // to keep track on same bubble tap multiplier
         previousBubble = sender
         
+        // if current score higher than highest-score dynamically update the view
         if (score > highestScore) {
             highScore.text = String(score)
         }
@@ -148,7 +151,7 @@ class GameView: UIViewController {
   
     
     // supporting game functions
-    
+    // adding the bubbles in the screen
       func addBubbles() -> Bubble? {
           currentBubble = colourProbability(bubble: currentBubble)
           let bubble = currentBubble
@@ -165,7 +168,7 @@ class GameView: UIViewController {
           return bubble
       }
     
-    
+    // for the bubbles' color probability
     func colourProbability(bubble: Bubble) -> Bubble {
         switch colourCounter {
         case 0...40:
@@ -181,6 +184,7 @@ class GameView: UIViewController {
         }
     }
     
+    // when user finish the game, show modal to redirect user to homeView or highscoreView
     func showModalBox(){
          let alert = UIAlertController(title: "Game Over", message: "Good job! Your score was \(score)", preferredStyle: .alert)
         
@@ -196,12 +200,14 @@ class GameView: UIViewController {
          self.present(alert, animated: true)
     }
     
+    // clear the screen
     func clearScreen() {
          for bubble in bubblePoints {
              bubble.removeFromSuperview()
          }
      }
     
+    // get highest score in the highscore array
      func getHighestScore(array: Array<HighScore>) -> Int {
          var highestScore = 0
         // if there's only one highscore in array automatically that's the highest
@@ -219,7 +225,7 @@ class GameView: UIViewController {
          return highestScore
      }
     
-    
+    // find the player from highscore array
      func findDataIndex(player: String, array: Array<HighScore>) -> Int {
          var playerIndex = Int()
          for index in 0..<array.count {
@@ -230,7 +236,7 @@ class GameView: UIViewController {
          return playerIndex
      }
     
-        
+    // choose where the current highscore will be stored on the array (sorted.)
     func allocateArray(array: Array<HighScore>) -> Int {
         for i in 0..<array.count{
             if(score >= array[i].highScore){
@@ -240,6 +246,7 @@ class GameView: UIViewController {
         return array.count
     }
     
+    // see if the player is old player or new player
     func checkOldPlayer(array: Array <HighScore>, isOldPlayer: Bool, higherScore: Bool) -> (Bool, Bool){
         var isOldPlayer = isOldPlayer;
         var higherScore = higherScore;

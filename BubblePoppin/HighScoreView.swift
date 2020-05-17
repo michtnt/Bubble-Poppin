@@ -24,7 +24,6 @@ class HighScoresView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // setup
         // display highest scores limited to 10 only
         if highScoresArray.count <= 10 {
             for index in 0..<highScoresArray.count {
@@ -46,6 +45,7 @@ class HighScoresView: UIViewController {
             }
         } else {
                 for index in 0..<10 {
+                    
                      // the user name
                      let nameLabel = UILabel(frame: CGRect(x: 0, y:0, width: 200, height: 50))
                      nameLabel.center = CGPoint(x: nameXCoord, y: yCoord)
@@ -68,6 +68,7 @@ class HighScoresView: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let highScores = highScoresArray
         
+        // go to homeView with the selectedName
         if segue.identifier == "homeSegue" {
             if let target = segue.destination as? HomeView {
                 target.selectedName = playerName

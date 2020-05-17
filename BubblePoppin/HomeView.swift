@@ -40,9 +40,10 @@ class HomeView: UIViewController {
         if(selectedName != ""){nameField.text = selectedName}
         // allowPlay.isEnabled = false;
         if (highScoresArray.isEmpty == true) {
+            // default high-score
             let firstScore = HighScore()
             firstScore.name = "Michelle"
-            firstScore.highScore = 1
+            firstScore.highScore = 10
             highScoresArray.append(firstScore)
         }
     }

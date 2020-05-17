@@ -27,9 +27,11 @@ class GameInfoView: UIViewController {
     
     override func viewDidLoad() {
            super.viewDidLoad()
+           // set timer
            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(set), userInfo: nil, repeats: true)
        }
     
+    // to set the screen display according to the time count
     @objc func set(){
         time -= 1;
         ready.text = String(time);
@@ -45,7 +47,7 @@ class GameInfoView: UIViewController {
      // when segue is triggered (button press, etc.) this method will be triggered
       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
              
-          // go to SetupView to proceed to play game
+          // go to GameView to proceed to play game
           if segue.identifier == "gameSegue" {
               if let target = segue.destination as? GameView {
                  target.selectedName = selectedName;

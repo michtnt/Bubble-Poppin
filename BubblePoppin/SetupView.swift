@@ -60,6 +60,7 @@ class SetupView: UIViewController {
                 target.selectedBubbles = gameBubbles;
             }
         }
+        // go back to homeView with the previous name
         if segue.identifier == "backSegue" {
               if let target = segue.destination as? HomeView
               {
