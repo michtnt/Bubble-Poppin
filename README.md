@@ -4,11 +4,11 @@
 
 The purpose of this project is to demonstrate competence in the following skills:
 
-- [ ] The full software development cycle
-- [ ] iOS App UI and program design
-- [ ] iOS UI programming
-- [ ] Effective use of platform APIs
-- [ ] Program testing
+- [x] The full software development cycle
+- [x] iOS App UI and program design
+- [x] iOS UI programming
+- [x] Effective use of platform APIs
+- [x] Program testing
 
 ## Specification
 
